@@ -9,7 +9,6 @@ function changeColour() {
         index = 0;
     }
     btn.style.backgroundColor = buttonColours[index];
-    console.log(index);
 }
 
 setInterval(changeColour, 10000);

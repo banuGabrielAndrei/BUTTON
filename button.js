@@ -1,14 +1,15 @@
 let btn = document.getElementById("btn");
-btn.style.backgroundColor = "red";
-    
+let buttonColours = ['red', 'yellow', 'green'];
+let index = 0;
+btn.style.backgroundColor = buttonColours[index];
+
 function changeColour() {
-    if (btn.style.backgroundColor == "red") {
-        btn.style.backgroundColor = "yellow";
-    } else if (btn.style.backgroundColor == "yellow") {
-        btn.style.backgroundColor = "green";
-    } else if(btn.style.backgroundColor == "green") {
-        btn.style.backgroundColor = "red";
+    ++index;
+    if (index == buttonColours.length) {
+        index = 0;
     }
+    btn.style.backgroundColor = buttonColours[index];
+    console.log(index);
 }
 
 setInterval(changeColour, 10000);
